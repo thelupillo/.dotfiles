@@ -1,0 +1,26 @@
+#!/bin/bash
+
+LIB_FILE=${HOME}/.dotfiles/.scripts/lib.sh
+if [ -f $LIB_FILE ]; then
+	. $LIB_FILE
+fi
+
+PACKAGE="vim"
+PACKAGE_DNF="vim-enhanced"	# redhat based 	(dnf)
+PACKAGE_APT=$PACKAGE		# debian based 	(apt)
+PACKAGE_PACMAN=$PACKAGE		# arch based 	(pacman)
+
+case "$(getDistroId)" in
+	"redhat" | "fedora" | "almalinux" | "rocky" )
+		echo $PACKAGE_DNF
+		;;
+	"debian" | "ubuntu" )
+		echo $PACKAGE_APT
+		;;
+	"arch" | "manjaro" )
+		echo $PACKAGE_PACMAN
+		;;
+	* )
+		echo $PACKAGE
+		;;
+esac
