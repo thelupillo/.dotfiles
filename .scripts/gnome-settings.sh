@@ -23,6 +23,10 @@ gsettings set org.gnome.desktop.privacy remove-old-temp-files true
 # Never prompt or start programson media insertion
 gsettings set org.gnome.desktop.media-handling autorun-never true
 
+#	GNOME WM
+# -- Buttons layout -- #
+gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,close'
+
 #	GNOME gedit
 # -- Theme -- #
 gsettings set org.gnome.gedit.preferences.editor scheme 'oblivion'
