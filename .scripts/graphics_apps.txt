@@ -1,0 +1,9 @@
+# On Vulkan apps, to use Nvidia
+__NV_PRIME_RENDER_OFFLOAD=1 
+__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=NVIDIA_only 
+
+# On Vulkan apps, to use Intel
+__NV_PRIME_RENDER_OFFLOAD=1 __VK_LAYER_NV_optimus=non_NVIDIA_only 
+
+# On OpenGL or others, to use Nvidia
+__NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia 
