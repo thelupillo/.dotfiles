@@ -26,6 +26,8 @@ gsettings set org.gnome.desktop.media-handling autorun-never true
 #	GNOME WM
 # -- Buttons layout -- #
 gsettings set org.gnome.desktop.wm.preferences button-layout 'appmenu:minimize,close'
+# -- Window Switching -- #
+gsettings set org.gnome.desktop.wm.keybindings switch-windows "['<Alt>Tab']"
 
 #	GNOME gedit
 # -- Theme -- #
